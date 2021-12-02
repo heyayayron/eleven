@@ -14,7 +14,7 @@ add_subdirectory(vendor/glfw-3.3.5)
 
 find_package(OpenGL REQUIRED)
 
-add_executable(eleven main.cpp src/Application.cpp src/Application.h src/Renderer/OpenGLRenderer.cpp src/Renderer/OpenGLRenderer.h src/Eleven.h src/Renderer/linmath.h src/Renderer/IRendererAPI.h src/Renderer/DirectXRenderer.cpp src/Renderer/DirectXRenderer.h vendor/dxsdk/src/dxguids.cpp src/Core/Buffer.cpp src/Core/Buffer.h src/Core/ElevenMath.h)
+add_executable(eleven main.cpp src/Application.cpp src/Application.h src/Renderer/OpenGLRenderer.cpp src/Renderer/OpenGLRenderer.h src/Eleven.h src/Renderer/linmath.h src/Renderer/IRendererAPI.h src/Renderer/DirectXRenderer.cpp src/Renderer/DirectXRenderer.h vendor/dxsdk/src/dxguids.cpp src/Core/ElevenMath.h)
 
 target_link_libraries(eleven ${CMAKE_CURRENT_SOURCE_DIR}/vendor/dxsdk/lib/dxguid.lib)
 target_link_libraries(eleven ${CMAKE_CURRENT_SOURCE_DIR}/vendor/dxsdk/lib/d3d10.lib)

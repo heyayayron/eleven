@@ -8,7 +8,7 @@
 class OpenGLRenderer : public IRendererAPI
 {
 public:
-    OpenGLRenderer(u32 width, u32 height);
+    OpenGLRenderer(const u32 width, const u32 height);
     ~OpenGLRenderer();
     void Render() override;
     void Setup(Eleven::Vertex* vertices) override;

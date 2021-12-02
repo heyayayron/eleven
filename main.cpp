@@ -3,7 +3,7 @@
 
 int main()
 {
-    auto application = new Application(480, 320, EBackend::DIRECTX);
+    auto application = new Application(480, 320, EBackend::OPENGL);
     application->Run();
     return 0;
 }

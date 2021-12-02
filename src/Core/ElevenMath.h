@@ -40,15 +40,6 @@ namespace Eleven
         Vertex(float x, float y, float r, float g, float b)
             : pos( x, y ), colour( r, g, b ) {}
     };
-
-//    const struct Vertex
-//    {
-//        vec2 pos;
-//
-//        Vertex() {}
-//        Vertex(float x, float y)
-//                : pos( x, y ) {}
-//    };
 }
 
 #endif //ELEVEN_ELEVENMATH_H

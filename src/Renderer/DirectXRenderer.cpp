@@ -1,5 +1,6 @@
 #define GLFW_EXPOSE_NATIVE_WIN32
 // #define GLFW_EXPOSE_NATIVE_WG
+
 #ifdef _WINDOWS_
     #include <windows.h>
 #endif
@@ -37,13 +38,12 @@ void DirectXRenderer::CreateVertexBuffer()
     UpdateSubresources(m_commandList.Get(), m_pVertexBuffer, m_pVertexBuffer, 0, 0, 1, &vertexData);
 }
 
-DirectXRenderer::DirectXRenderer(u32 width, u32 height) : IRendererAPI()
+DirectXRenderer::DirectXRenderer(const u32 width, const u32 height) : IRendererAPI()
 {
     _width = width;
     _height = height;
 
     WCHAR assetsPath[512];
-    ///GetAssetsPath(assetsPath, _countof(assetsPath));
     _assetsPath = assetsPath;
     _aspectRatio = static_cast<float>(width) / static_cast<float>(height);
 
@@ -53,7 +53,7 @@ DirectXRenderer::DirectXRenderer(u32 width, u32 height) : IRendererAPI()
 
     if(!glfwInit())
     {
-        throw "GLFW: Failed to initialise.";
+        std::cout << "GLFW: failed to initialise.\n";
     }
 
     _dxContext = glfwCreateWindow(_width, _height, "Eleven (DirectX12)", NULL, NULL);
@@ -84,7 +84,6 @@ void DirectXRenderer::Render()
         OnRender();
         glfwPollEvents();
 
-        // Process any messages in the queue.
         if (PeekMessage(&msg, NULL, 0, 0, PM_REMOVE))
         {
             TranslateMessage(&msg);
@@ -116,8 +115,6 @@ void DirectXRenderer::LoadPipeline()
     UINT dxgiFactoryFlags = 0;
 
 #if defined(_DEBUG)
-    // Enable the debug layer (requires the Graphics Tools "optional feature").
-    // NOTE: Enabling the debug layer after device creation will invalidate the active device.
     {
         ComPtr<ID3D12Debug> debugController;
         if (SUCCEEDED(D3D12GetDebugInterface(IID_PPV_ARGS(&debugController))))

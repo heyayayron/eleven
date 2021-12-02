@@ -38,7 +38,7 @@ using Microsoft::WRL::ComPtr;
 class DirectXRenderer : public IRendererAPI
 {
 public:
-    DirectXRenderer(u32 width, u32 height);
+    DirectXRenderer(const u32 width, const u32 height);
     ~DirectXRenderer();
     void Render() override;
     void Setup(Eleven::Vertex* vertices) override;

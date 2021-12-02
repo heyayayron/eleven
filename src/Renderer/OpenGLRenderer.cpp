@@ -38,7 +38,7 @@ static const char* fragment_shader_text =
         "    gl_FragColor = vec4(color, 1.0);\n"
         "}\n";
 
-OpenGLRenderer::OpenGLRenderer(u32 width, u32 height) : IRendererAPI()
+OpenGLRenderer::OpenGLRenderer(const u32 width, const u32 height) : IRendererAPI()
 {
     _width = width;
     _height = height;
