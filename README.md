@@ -27,4 +27,5 @@ Required:
 * Windowing 
 * Backends
 * Basic Renderer
+    * OpenGL Renderer shouldn't use **GL_QUADS**
 * Rendering pipeline specifics (Starting with OpenGL)
