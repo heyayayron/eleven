@@ -101,7 +101,7 @@ namespace el
 
             _basicShader.get()->Use();
             _basicShader.get()->SetFragmentMat4fv("MVP", mvp);
-            _basicShader.get()->SetFragmentVar1f("vTime", frameCount);
+            _basicShader.get()->SetFragmentVar1f("vTime", frameCount); // currently vTime is just the frame number
 
             glDrawArrays(GL_QUADS, 0, 4);
 
