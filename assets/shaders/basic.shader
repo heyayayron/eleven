@@ -17,8 +17,8 @@ void main()
     time = vTime;
 }
 
-    #type fragment
-    #version 110
+#type fragment
+#version 110
 varying vec3 color;
 varying vec3 position;
 varying float time;
