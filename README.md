@@ -1,6 +1,7 @@
 # Eleven
 
 An experiment in agnostic graphics API rendering.
+Inspired by BGFX https://github.com/bkaradzic/bgfx but not using any of the source.
 
 ## Goals
 
