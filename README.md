@@ -3,6 +3,8 @@
 An experiment in agnostic graphics API rendering.
 Inspired by BGFX https://github.com/bkaradzic/bgfx but not using any of the source.
 
+![trippy.gif](trippy.gif)
+
 ## Goals
 
 * Define a primitive via an abstraction
