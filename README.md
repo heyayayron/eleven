@@ -21,3 +21,10 @@ Required:
     glfw-3.3.5/include
     glfw-3.3.5/src
     glfw/CMakeLists.txt
+
+## TODO
+
+* Windowing 
+* Backends
+* Basic Renderer
+* Rendering pipeline specifics (Starting with OpenGL)
