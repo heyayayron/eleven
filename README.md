@@ -2,6 +2,14 @@
 
 An experiment in agnostic graphics API rendering.
 
+## Goals
+
+* Define a primitive via an abstraction
+* Define a textured quad via an abstraction
+* Define a shader via an abstraction
+* The ability to render a primtive, textured quad or shader then switch backends without any difference (platform permitting).
+* Switch backends at runtime (ignoring application state)
+
 ## Requirements
 
 The **vendor** directory needs the following dependencies
